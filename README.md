@@ -1,4 +1,4 @@
-# NIM in Rust
+# NIM
 ## An implementation for finding a NIM Cycle in Rust given any subtraction sequence
 ## Started in Rust and then Shifted to Python.
 

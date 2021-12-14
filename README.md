@@ -15,5 +15,5 @@ $ python3 basic.py
 ~~4. Given c = b + b, and a > 10 and b = 5, then the cycle length is 15 + (a - 10).~~
 
 ## Background of 2-Player 1 String NIM
-Nim is a combinarotial two-player game in which each player alternates turns removing any number of tokens from one of possibly many piles.
+Nim is a combinatorial two-player game in which each player alternates turns removing any number of tokens from one of possibly many piles.
 

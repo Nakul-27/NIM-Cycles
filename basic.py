@@ -27,7 +27,6 @@ def basic(a, b, operation):
 
 def write_to_file(file_name, a, b):
     f = open(file_name, "w")
-    f.writelines("Conjecture: When c = a + b, then the cycle length is equal to c + a.\n")
     for elem in a:
         for elemen in b:
             f.writelines("a = ")

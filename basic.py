@@ -1,22 +1,23 @@
+# Basic implementation of NIM in Python
+# Further information in "NIM Cycles.xlsx"
+# Nakul Rao
 import math
 
 def basic(a, b, operation):
-    print("a = ", a)
-    print("b = ", b)
+    # print("a = ", a)
+    # print("b = ", b)
     if operation == "add":
         c = b + b
     elif operation == "mult":
         c = a * b
     else:
         print("Unreachable!")
-    # c = a + b
-    print("c = ", c)
-    # print("Proposed Cycle Length (c + a): ", c + a)
+    # print("c = ", c)
 
     max_num = max(a,max(b,c))
     starting_index = max_num
 
-    final_array = [0] * 200
+    final_array = [0] * 400
 
     for index in range(starting_index, len(final_array)):
         prod = final_array[index - a] * final_array[index - b] * final_array[index - c]
@@ -24,11 +25,9 @@ def basic(a, b, operation):
 
     return final_array
 
-if __name__ == "__main__":
-    f = open("output.txt", "w+")
+def write_to_file(file_name, a, b):
+    f = open(file_name, "w")
     f.writelines("Conjecture: When c = a + b, then the cycle length is equal to c + a.\n")
-    a = [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50]
-    b = [1,2,3,4,5]
     for elem in a:
         for elemen in b:
             f.writelines("a = ")
@@ -43,3 +42,10 @@ if __name__ == "__main__":
             f.writelines("\n")
             f.writelines(str(basic(elem, elemen, "add")))
             f.writelines("\n\n")
+    print("Written.")
+
+if __name__ == "__main__":
+    a = [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50]
+    b = [1,2,3,4,5]
+    write_to_file("output.txt", a, b)
+

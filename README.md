@@ -20,6 +20,4 @@ $ python3 basic.py
 
 7. If c = b^2 and a is odd and b = 1, then Cl = 2
 
-## Background of 2-Player 1 String NIM
-Nim is a combinatorial two-player game in which each player alternates turns removing any number of tokens from one of possibly many piles.
 
